@@ -1,6 +1,6 @@
 # SortVisualization
 
-Visualization by python3 of various sorting algorithms
+Visualizing various sorting algorithms by python3
 
 このプログラムでは様々なソートの可視化を行う
 
