@@ -1,6 +1,8 @@
 # SortVisualization
 
+
 Visualization of various sorting algorithms by python3
+
 
 このプログラムでは様々なソートの可視化を行う
 
