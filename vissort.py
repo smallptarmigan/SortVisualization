@@ -1,5 +1,6 @@
 # Sort Visualization
 
+import sys
 import array
 import random
 import numpy as np
@@ -12,6 +13,16 @@ MIXNUM  = 200
 
 # fixed seed value
 random.seed(0)
+
+def make_image(array, count):
+    #plt.bar(range(len(array)), array, width=0.95)
+    plt.bar(range(len(array)), array)
+    plt.xlim([-1,len(array)])
+    plt.tick_params(labelbottom="off",bottom="off")
+    plt.tick_params(labelleft="off",left="off")
+    plt.savefig('./pic/image_{:0>6}.png'.format(count))
+    #plt.show()
+    plt.close('all')
 
 def mix_data(array):
     for i in range(MIXNUM):
@@ -32,11 +43,8 @@ def insertion_sort(array):
                 if j <= 0 or tmp >= array[j-1]:
                     break
             array[j] = tmp
-        
-        fig = plt.bar(range(len(array)), array, width=0.9)
-        plt.savefig('./pic/image_{:0>6}.png'.format(count))
-        #plt.show()
-        plt.close('all')
+        make_image(array, count)
+        #sys.exit()
         count += 1
 
 if __name__ == '__main__':
