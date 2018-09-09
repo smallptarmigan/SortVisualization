@@ -13,13 +13,18 @@ pythonのコードではフレームあたりの画像を生成するため、
 ```bash
 $ python3 vissort.py
 ```
-出力画像はpicというディレクトリ下に出されるためない場合は
-作ってから実行するとエラーが解消されるかもしれません
 
 gif動画の生成
 ```bash
 $ convert -delay 10 -loop 0 pic/image*.png movie.gif
 ```
+
+gif動画の圧縮
+```bash
+$ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
+```
+
+以下の動画は挿入ソートの例です。
 
 ![result](https://github.com/smallptarmigan/SortVisualization/blob/master/media/sample.gif)
 
