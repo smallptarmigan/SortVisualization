@@ -15,14 +15,24 @@ MIXNUM  = 200
 random.seed(0)
 
 def make_image(array, count):
-    #plt.bar(range(len(array)), array, width=0.95)
-    plt.bar(range(len(array)), array)
+    
+    plt.bar(range(len(array)), array, color='#FFA0A0')
     plt.xlim([-1,len(array)])
     plt.tick_params(labelbottom="off",bottom="off")
     plt.tick_params(labelleft="off",left="off")
     plt.savefig('./pic/image_{:0>6}.png'.format(count))
     #plt.show()
     plt.close('all')
+
+def print_progress(now, total, par):
+    if (10 * (now / total)) > par:
+        sys.stdout.write("#")
+        par += 1
+
+def make_endimage(array, count):
+    for i in range(10):
+        make_image(array, count)
+        count += 1
 
 def mix_data(array):
     for i in range(MIXNUM):
@@ -32,7 +42,10 @@ def mix_data(array):
 
 def insertion_sort(array):
     count = 0
+    par = 0
     n = len(array)
+    print("insertion sort")
+    sys.stdout.write(":")
     for i in range(1,n):
         tmp = array[i]
         if tmp < array[i-1]:
@@ -44,12 +57,15 @@ def insertion_sort(array):
                     break
             array[j] = tmp
         make_image(array, count)
+        print_progress(i, n, par)
         #sys.exit()
         count += 1
+    print("")
+    make_endimage(array, count)
 
 if __name__ == '__main__':
     data = array.array('i', range(1, LISTNUM))
     mix_data(data)
     insertion_sort(data)
-
+    
 
