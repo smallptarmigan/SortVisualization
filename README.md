@@ -7,16 +7,17 @@ Visualizing various sorting algorithms by python3
 python3を用いてソート時のメモリ空間を棒グラフで表示
 
 pythonのコードではフレームあたりの画像を生成するため、
+
 動画にする際はimagemagickを用いてgifに変換する必要
 
-コマごとの画像の生成
+コマごとの画像の生成(pic/下に画像が生成されます)
 ```bash
 $ python3 vissort.py
 ```
 
 gif動画の生成
 ```bash
-$ convert -delay 10 -loop 0 pic/image*.png movie.gif
+$ convert -delay 3 -loop 0 pic/image*.png movie.gif
 ```
 
 gif動画の圧縮

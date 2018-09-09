@@ -32,7 +32,7 @@ def make_image(array, count, a, b):
     plt.close('all')
 
 def make_endimage(array, count):
-    for i in range(10):
+    for i in range(25):
         make_image(array, count, -1, -1)
         count += 1
 
