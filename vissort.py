@@ -1,6 +1,7 @@
 # Sort Visualization
 
 import sys
+import time
 import array
 import random
 import numpy as np
@@ -8,7 +9,7 @@ import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
 
-LISTNUM = 100
+LISTNUM = 50
 MIXNUM  = 200
 
 # fixed seed value
@@ -43,16 +44,15 @@ def print_progress(now, total, par):
 
 def mix_data(array):
     for i in range(MIXNUM):
-        a = random.randrange(LISTNUM)
-        b = random.randrange(LISTNUM)
+        a = random.randrange(len(array))
+        b = random.randrange(len(array))
         array[a], array[b] = array[b], array[a]
 
 def insertion_sort(array):
+    print("insertion sort")
     count = 0
     par = 0
     n = len(array)
-    print("insertion sort")
-    #sys.stdout.write(":")
     for i in range(1,n):
         tmp = array[i]
         if tmp < array[i-1]:
@@ -65,14 +65,33 @@ def insertion_sort(array):
                 if j <= 0 or tmp >= array[j-1]:
                     break
             array[j] = tmp
-        print_progress(i, n, par)
+        #print_progress(i, n, par)
         #sys.exit()
-    print("")
+    make_endimage(array, count)
+
+def bubble_sort(array):
+    print("bubble sort")
+    count = 0
+    par = 0
+    n = len(array)
+    for i in range(0, n):
+        rev = range(i, n)
+        for j in reversed(rev):
+            if array[j-1] > array[j]:
+                temp = array[j-1]
+                array[j-1] = array[j]
+                array[j] = temp
+            make_image(array, count, j, -1)
+            count += 1
     make_endimage(array, count)
 
 if __name__ == '__main__':
+    start = time.time()
+
     data = array.array('i', range(1, LISTNUM))
     mix_data(data)
-    insertion_sort(data)
-    
 
+    #insertion_sort(data)
+    bubble_sort(data)
+
+    print(time.time() - start)

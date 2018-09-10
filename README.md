@@ -15,7 +15,7 @@ pythonのコードではフレームあたりの画像を生成するため、
 $ python3 vissort.py
 ```
 
-gif動画の生成
+gif動画の生成(delayによって速さを変えられます)
 ```bash
 $ convert -delay 3 -loop 0 pic/image*.png movie.gif
 ```
@@ -25,7 +25,12 @@ gif動画の圧縮
 $ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
 ```
 
-以下の動画は挿入ソートの例です。
+以下の動画はバブルソートの例です。
 
 ![result](https://github.com/smallptarmigan/SortVisualization/blob/master/media/sample.gif)
+
+現在実行可能なソート
+
+・挿入ソート
+・バブルソート
 
