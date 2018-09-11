@@ -81,9 +81,26 @@ def bubble_sort(array):
                 temp = array[j-1]
                 array[j-1] = array[j]
                 array[j] = temp
-            make_image(array, count, j, -1)
+            make_image(array, count, j-1, -1)
             count += 1
     make_endimage(array, count)
+
+def selection_sort(array):
+    print("selection_sort")
+    count = 0
+    par = 0
+    n = len(array)
+    for i in range(n-1):
+        least = i
+        for j in range(i+1, n):
+            if array[j] < array[least]:
+                least = j
+            make_image(array, count, j, i)
+        tmp = array[i]
+        array[i] = array[least]
+        array[least] = tmp
+    make_endimage(array, count)
+
 
 if __name__ == '__main__':
     start = time.time()
@@ -93,5 +110,6 @@ if __name__ == '__main__':
 
     #insertion_sort(data)
     bubble_sort(data)
+    #selection_sort(data)
 
     print(time.time() - start)
