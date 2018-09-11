@@ -10,7 +10,7 @@ mpl.use('Agg')
 import matplotlib.pyplot as plt
 
 LISTNUM = 50
-MIXNUM  = 200
+MIXNUM  = 300
 
 # fixed seed value
 random.seed(0)
@@ -31,6 +31,7 @@ def make_image(array, count, a, b):
     plt.savefig('./pic/image_{:0>6}.png'.format(count))
     #plt.show()
     plt.close('all')
+    count += 1
 
 def make_endimage(array, count):
     for i in range(25):
@@ -47,7 +48,8 @@ def mix_data(array):
         a = random.randrange(len(array))
         b = random.randrange(len(array))
         array[a], array[b] = array[b], array[a]
-
+    print("complete mix array")
+        
 def insertion_sort(array):
     print("insertion sort")
     count = 0
@@ -95,12 +97,12 @@ def selection_sort(array):
         for j in range(i+1, n):
             if array[j] < array[least]:
                 least = j
-            make_image(array, count, j, i)
+            make_image(array, count, j, least)
+            count += 1
         tmp = array[i]
         array[i] = array[least]
         array[least] = tmp
     make_endimage(array, count)
-
 
 if __name__ == '__main__':
     start = time.time()
@@ -109,7 +111,7 @@ if __name__ == '__main__':
     mix_data(data)
 
     #insertion_sort(data)
-    bubble_sort(data)
-    #selection_sort(data)
+    #bubble_sort(data)
+    selection_sort(data)
 
     print(time.time() - start)
