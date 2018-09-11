@@ -32,5 +32,7 @@ $ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
 現在実行可能なソート
 
 ・挿入ソート
+
 ・バブルソート
 
+・選択ソート
