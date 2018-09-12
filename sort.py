@@ -93,16 +93,22 @@ def merge(array, l, r, count, m):
             merged[i] = array[j]
             j += 1
         i += 1
+        gi.make_image(merged, count, m, i-1, -1)
+        count += 1
     
     while l <= mid:
         merged[i] = array[l]
         i += 1
         l += 1
+        gi.make_image(merged, count, m, i-1, -1)
+        count += 1
 
     while j <= r:
         merged[i] = array[j]
         i += 1
         j += 1
+        gi.make_image(merged, count, m, i-1, -1)
+        count += 1
 
     gi.make_image(array, count, m, -1, -1)
     count += 1
