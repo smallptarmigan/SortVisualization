@@ -7,7 +7,7 @@ import numpy as np
 
 import sort
 
-LISTNUM = 50
+LISTNUM = 100
 MIXNUM  = 300
 
 # fixed seed value
@@ -28,7 +28,8 @@ if __name__ == '__main__':
 
     #sort.insertion_sort(data)
     #sort.bubble_sort(data)
-    sort.selection_sort(data)
+    #sort.selection_sort(data)
+    sort.merge_sort(data)
 
     print(time.time() - start)
 
