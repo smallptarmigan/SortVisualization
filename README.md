@@ -12,7 +12,7 @@ pythonのコードではフレームあたりの画像を生成するため、
 
 コマごとの画像の生成(pic/下に画像が生成されます)
 ```bash
-$ python3 vissort.py
+$ python3 main.py
 ```
 
 gif動画の生成(delayによって速さを変えられます)

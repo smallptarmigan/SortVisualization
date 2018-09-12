@@ -9,36 +9,13 @@ import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
 
+import makeimage as mi
+
 LISTNUM = 50
 MIXNUM  = 300
 
 # fixed seed value
 random.seed(0)
-
-def make_image(array, count, m, a, b):
-    fig, ax = plt.subplots(1,1)
-    plt.bar(range(len(array)), array, color='#A0A0FF')
-    if (a != -1) and (b != -1):
-        mark = np.zeros(LISTNUM)
-        mark[a], mark[b] = array[a], array[b]
-        plt.bar(range(len(mark)), mark, color='#FFA0A0')
-    elif (a != -1):
-        mark = np.zeros(LISTNUM)
-        mark[a] = array[a]
-        plt.bar(range(len(mark)), mark, color='#FFA0A0')
-    plt.xlim([-1,len(array)])
-    plt.text(0.01, 0.99, m, fontsize=10, horizontalalignment='left', verticalalignment='top', family='monospace', transform=ax.transAxes)
-    plt.tick_params(labelbottom="off",bottom="off")
-    plt.tick_params(labelleft="off",left="off")
-    plt.savefig('./pic/image_{:0>6}.png'.format(count))
-    #plt.show()
-    plt.close('all')
-    count += 1
-
-def make_endimage(array, count, m):
-    for i in range(25):
-        make_image(array, count, m, -1, -1)
-        count += 1
 
 def print_progress(now, total, par):
     if (10 * (now / total)) > par:
@@ -64,7 +41,7 @@ def insertion_sort(array):
             j = i
             while True:
                 array[j] = array[j-1]
-                make_image(array, count, method, j, -1)
+                mi.make_image(array, count, method, j, -1)
                 count += 1
                 j -= 1
                 if j <= 0 or tmp >= array[j-1]:
@@ -72,7 +49,7 @@ def insertion_sort(array):
             array[j] = tmp
         #print_progress(i, n, par)
         #sys.exit()
-    make_endimage(array, count, method)
+    mi.make_endimage(array, count, method)
 
 def bubble_sort(array):
     print("bubble sort")
@@ -87,9 +64,9 @@ def bubble_sort(array):
                 temp = array[j-1]
                 array[j-1] = array[j]
                 array[j] = temp
-            make_image(array, count, method, j-1, -1)
+            mi.make_image(array, count, method, j-1, -1)
             count += 1
-    make_endimage(array, count, method)
+    mi.make_endimage(array, count, method)
 
 def selection_sort(array):
     print("selection sort")
@@ -102,12 +79,13 @@ def selection_sort(array):
         for j in range(i+1, n):
             if array[j] < array[least]:
                 least = j
-            make_image(array, count, method, j, least)
+            mi.make_image(array, count, method, j, least)
             count += 1
+            sys.exit()
         tmp = array[i]
         array[i] = array[least]
         array[least] = tmp
-    make_endimage(array, count, method)
+    mi.make_endimage(array, count, method)
 
 if __name__ == '__main__':
     start = time.time()
