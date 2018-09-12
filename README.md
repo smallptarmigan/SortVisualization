@@ -25,7 +25,7 @@ gif動画の圧縮
 $ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
 ```
 
-以下の動画はバブルソートの例です。
+以下の動画は選択ソートの例です。
 
 ![result](https://github.com/smallptarmigan/SortVisualization/blob/master/media/sample.gif)
 
