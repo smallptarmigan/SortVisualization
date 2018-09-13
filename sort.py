@@ -112,4 +112,53 @@ def merge(array, l, r, count, m):
 
     return merged[:], count
 
+###############################################################
+
+def quick_sort(array):
+    print("quick sort")
+    method = "quick sort"
+    count = 0
+    sys.setrecursionlimit(10000)
+    array, count = quick(array, 0, len(array)-1, count, method)
+    gi.make_endimage(array, count, method)
+
+def quick(array, l, r, count, m):
+    p = array[l]
+    lh = l
+    rh = r
+
+    while l < r:
+        while array[r] >= p and l < r:
+            r -= 1
+        
+        if l != r:
+            array[l] = array[r]
+            l += 1
+
+        gi.make_image(array, count, m, l, r)
+        count += 1
+        
+        while array[l] <= p and l < r:
+            l += 1
+
+        if l != r:
+            array[r] = array[l]
+            r -= 1
+    
+        gi.make_image(array, count, m, l, r)
+        count += 1
+
+    array[l] = p
+    p = l
+    l = lh
+    r = rh
+    if l < p:
+        array, count = quick(array, l, p-1, count, m)
+    if r > p:
+        array, count = quick(array, p+1, r, count, m)
+
+    return array, count
+
+###############################################################
+
 
