@@ -165,7 +165,7 @@ def radix_sort(array):
     print("radix sort")
     method = "radix sort"
     count = 0
-    r = 100
+    r = 10
     m = 1
 
     rad = array[:]

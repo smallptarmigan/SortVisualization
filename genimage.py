@@ -29,6 +29,9 @@ def make_image(array, count, m, a, b):
     count += 1
 
 def make_endimage(array, count, m):
+    for i in range(len(array)):
+        make_image(array, count, m, i, -1)
+        count += 1
     for i in range(25):
         make_image(array, count, m, -1, -1)
         count += 1

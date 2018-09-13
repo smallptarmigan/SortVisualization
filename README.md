@@ -31,13 +31,15 @@ $ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
 
 現在実行可能なソート
 
-・挿入ソート
+・挿入ソート(insertion sort)
 
-・バブルソート
+・バブルソート(bubble sort)
 
-・選択ソート
+・選択ソート(selection sort)
 
-・マージソート
+・マージソート(merge sort)
 
-・クイックソート
+・クイックソート(quick sort)
+
+・基数ソート(radix sort)
 

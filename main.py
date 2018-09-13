@@ -29,9 +29,9 @@ if __name__ == '__main__':
     #sort.insertion_sort(data)
     #sort.bubble_sort(data)
     #sort.selection_sort(data)
-    #sort.merge_sort(data)
+    sort.merge_sort(data)
     #sort.quick_sort(data)
-    sort.radix_sort(data)
+    #sort.radix_sort(data)
 
     print(time.time() - start)
 
