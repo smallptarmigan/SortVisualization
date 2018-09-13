@@ -7,7 +7,7 @@ import numpy as np
 
 import sort
 
-LISTNUM = 100
+LISTNUM = 50
 MIXNUM  = 300
 
 # fixed seed value

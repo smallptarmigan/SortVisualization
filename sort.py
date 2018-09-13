@@ -78,9 +78,9 @@ def merge(array, l, r, count, m):
     mid = (l + r) // 2
 
     merged = array[:]
-
     array, count = merge(array, l, mid, count, m)
     array, count = merge(array, mid+1, r, count, m)
+    merged = array[:]
 
     i = l
     j = mid + 1
@@ -109,9 +109,6 @@ def merge(array, l, r, count, m):
         j += 1
         gi.make_image(merged, count, m, i-1, -1)
         count += 1
-
-    gi.make_image(array, count, m, -1, -1)
-    count += 1
 
     return merged[:], count
 

@@ -18,6 +18,7 @@ def make_image(array, count, m, a, b):
         mark[a] = array[a]
         plt.bar(range(len(mark)), mark, color='#FFA0A0')
     plt.xlim([-1,len(array)])
+    plt.ylim([0,len(array)+4])
     plt.text(0.01, 0.99, m, fontsize=10, horizontalalignment='left', \
              verticalalignment='top', family='monospace', transform=ax.transAxes)
     plt.tick_params(labelbottom="off",bottom="off")
