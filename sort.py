@@ -161,4 +161,34 @@ def quick(array, l, r, count, m):
 
 ###############################################################
 
+def radix_sort(array):
+    print("radix sort")
+    method = "radix sort"
+    count = 0
+    r = 100
+    m = 1
+
+    rad = array[:]
+    y = array[:]
+
+    while m <= r:
+        for i in range(len(array)):
+            rad[i] = (array[i] // m) % 10
+        k = 0
+        for i in range(10):
+            for j in range(len(array)):
+                if rad[j] == i:
+                    y[k] = array[j]
+                    k += 1
+        for i in range(len(array)):
+            array[i] = y[i]
+            gi.make_image(array, count, method, i, -1)
+            count += 1
+        m *= 10
+
+    gi.make_endimage(array, count, method)
+
+###############################################################
+    
+
 
