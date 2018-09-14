@@ -29,21 +29,23 @@ if __name__ == '__main__':
 
     try :
         args = sys.argv
-        if args[1] == "-i":
+        if args[1] == "-in":
             sort.insertion_sort(data)
-        elif args[1] == "-b":
+        elif args[1] == "-bu":
             sort.bubble_sort(data)
-        elif args[1] == "-s":
+        elif args[1] == "-se":
             sort.selection_sort(data)
-        elif args[1] == "-m":
+        elif args[1] == "-me":
             sort.merge_sort(data)
-        elif args[1] == "-q":
+        elif args[1] == "-qu":
             sort.quick_sort(data)
-        elif args[1] == "-r":
+        elif args[1] == "-ra":
             sort.radix_sort(data)
+        elif args[1] == "-sh":
+            sort.shell_sort(data)
         else:
             sys.exit("[error] select option")
-    except :
+    except IndexError:
         sys.exit("[error] select option")
 
     print("[runtime] {0}[s]".format(time.time() - start))

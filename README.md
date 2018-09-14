@@ -14,7 +14,7 @@ pythonのコードではフレームあたりの画像を生成するため、
 
 コマごとの画像の生成(pic/下に画像が生成されます)
 ```bash
-$ python3 -B main.py [sort_option (ex:-i)]
+$ python3 -B main.py [sort_option (ex:-in)]
 ```
 
 gif動画の生成(delayによって速さを変えられます)
@@ -33,15 +33,16 @@ $ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
 
 現在実行可能なソート
 
-・挿入ソート(insertion sort) : -i
+・挿入ソート(insertion sort) : -in
 
-・バブルソート(bubble sort) : -b
+・バブルソート(bubble sort) : -bu
 
 ・選択ソート(selection sort) : -s
 
-・マージソート(merge sort) : -m
+・マージソート(merge sort) : -me
 
-・クイックソート(quick sort) : -q
+・クイックソート(quick sort) : -qu
 
-・基数ソート(radix sort) : -r
+・基数ソート(radix sort) : -ra
 
+・シェルソート(shell sort) : -sh

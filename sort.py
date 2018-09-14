@@ -190,6 +190,30 @@ def radix_sort(array):
 
 ###############################################################
     
+def shell_sort(array):
+    print("[log] run shell sort")
+    method = "shell sort"
+    count = 0
+    increment = 4
+    while increment > 0:
+        for i in range(len(array)):
+            j = i
+            temp = array[i]
+            while j >= increment and array[j-increment] > temp:
+                array[j] = array[j-increment]
+                j = j -increment
+            array[j] = temp
+            gi.make_image(array, count, method, i, -1)
+            count += 1
+        
+        if increment//2 != 0:
+            increment = increment//2
+        elif increment == 1:
+            increment = 0
+        else:
+            increment = 1
+    
+    gi.make_endimage(array, count, method)
 
     
 
