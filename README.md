@@ -10,9 +10,11 @@ pythonのコードではフレームあたりの画像を生成するため、
 
 動画にする際はimagemagickを用いてgifに変換する必要
 
+始めて実行する際はpicという名前のディレクトリを作る必要があります
+
 コマごとの画像の生成(pic/下に画像が生成されます)
 ```bash
-$ python3 -B main.py
+$ python3 -B main.py [sort_option (ex:-i)]
 ```
 
 gif動画の生成(delayによって速さを変えられます)
@@ -31,15 +33,15 @@ $ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
 
 現在実行可能なソート
 
-・挿入ソート(insertion sort)
+・挿入ソート(insertion sort) : -i
 
-・バブルソート(bubble sort)
+・バブルソート(bubble sort) : -b
 
-・選択ソート(selection sort)
+・選択ソート(selection sort) : -s
 
-・マージソート(merge sort)
+・マージソート(merge sort) : -m
 
-・クイックソート(quick sort)
+・クイックソート(quick sort) : -q
 
-・基数ソート(radix sort)
+・基数ソート(radix sort) : -r
 

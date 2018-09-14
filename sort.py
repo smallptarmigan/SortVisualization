@@ -5,7 +5,7 @@ import array
 import genimage as gi
 
 def insertion_sort(array):
-    print("insertion sort")
+    print("[log] run insertion sort")
     method = "insertion sort"
     count = 0
     n = len(array)
@@ -27,7 +27,7 @@ def insertion_sort(array):
 ###############################################################
 
 def bubble_sort(array):
-    print("bubble sort")
+    print("[log] run bubble sort")
     method = "bubble sort"
     count = 0
     n = len(array)
@@ -45,7 +45,7 @@ def bubble_sort(array):
 ###############################################################
 
 def selection_sort(array):
-    print("selection sort")
+    print("[log] run selection sort")
     method = "selection sort"
     count = 0
     n = len(array)
@@ -65,7 +65,7 @@ def selection_sort(array):
 ###############################################################
 
 def merge_sort(array):
-    print("merge sort")
+    print("[log] run merge sort")
     method = "merge sort"
     count = 0
     sys.setrecursionlimit(10000)
@@ -115,7 +115,7 @@ def merge(array, l, r, count, m):
 ###############################################################
 
 def quick_sort(array):
-    print("quick sort")
+    print("[log] run quick sort")
     method = "quick sort"
     count = 0
     sys.setrecursionlimit(10000)
@@ -162,7 +162,7 @@ def quick(array, l, r, count, m):
 ###############################################################
 
 def radix_sort(array):
-    print("radix sort")
+    print("[log] run radix sort")
     method = "radix sort"
     count = 0
     r = 10
@@ -191,4 +191,5 @@ def radix_sort(array):
 ###############################################################
     
 
+    
 

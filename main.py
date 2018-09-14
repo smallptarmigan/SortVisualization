@@ -1,5 +1,6 @@
 # Sort Visualization main function
 
+import sys
 import time
 import array
 import random
@@ -18,7 +19,7 @@ def mix_data(array):
         a = random.randrange(len(array))
         b = random.randrange(len(array))
         array[a], array[b] = array[b], array[a]
-    print("complete mix array")
+    print("[log] complete mix array")
         
 if __name__ == '__main__':
     start = time.time()
@@ -26,12 +27,24 @@ if __name__ == '__main__':
     data = array.array('i', range(1, LISTNUM))
     mix_data(data)
 
-    #sort.insertion_sort(data)
-    #sort.bubble_sort(data)
-    #sort.selection_sort(data)
-    sort.merge_sort(data)
-    #sort.quick_sort(data)
-    #sort.radix_sort(data)
+    try :
+        args = sys.argv
+        if args[1] == "-i":
+            sort.insertion_sort(data)
+        elif args[1] == "-b":
+            sort.bubble_sort(data)
+        elif args[1] == "-s":
+            sort.selection_sort(data)
+        elif args[1] == "-m":
+            sort.merge_sort(data)
+        elif args[1] == "-q":
+            sort.quick_sort(data)
+        elif args[1] == "-r":
+            sort.radix_sort(data)
+        else:
+            sys.exit("[error] select option")
+    except :
+        sys.exit("[error] select option")
 
-    print(time.time() - start)
+    print("[runtime] {0}[s]".format(time.time() - start))
 
