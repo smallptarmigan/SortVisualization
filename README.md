@@ -8,11 +8,11 @@ python3を用いてソート時のメモリ空間を棒グラフで表示
 
 pythonのコードではフレームあたりの画像を生成するため、
 
-動画にする際はimagemagickを用いてgifに変換する必要
+動画にする際はimagemagickを用いてgifに変換する必要があります
 
-始めて実行する際はpicという名前のディレクトリを作る必要があります
+※始めて実行する際はpicという名前のディレクトリを作る必要があります
 
-コマごとの画像の生成(pic/下に画像が生成されます)
+コマごとの画像の生成(pic/下に画像が生成されます/オプションは下記参照)
 ```bash
 $ python3 -B main.py [sort_option (ex:-in)]
 ```
@@ -37,7 +37,7 @@ $ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
 |:------------:|:------------:|:------------:|
 | 挿入ソート | insertion sort | -in |
 | バブルソート | bubble sort | -bu |
-| 選択ソート | selection sort | -s |
+| 選択ソート | selection sort | -se |
 | マージソート | merge sort | -me |
 | クイックソート | quick sort | -qu | 
 | 基数ソート | radix sort | -ra |
