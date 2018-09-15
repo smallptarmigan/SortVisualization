@@ -281,4 +281,24 @@ def downheap(array, count, m, root, bot) :
 
     return array, count
 
+###############################################################
 
+def comb_sort(array):
+    print("[log] run comb_sort")
+    method = "comb sort"
+    count = 0
+    h = len(array)
+    f = False
+
+    while (h > 1 or f) :
+        h = (h * 10) // 13
+        f = False
+        for i in range(len(array)-h):
+            if array[i] > array[i+h]:
+                array[i], array[i+h] = array[i+h], array[i]
+            gi.make_image(array, count, method, i, i+h)
+            count += 1
+
+    gi.make_endimage(array, count, method)
+
+###############################################################

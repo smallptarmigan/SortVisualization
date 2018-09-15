@@ -47,6 +47,8 @@ if __name__ == '__main__':
             sort.shaker_sort(data)
         elif args[1] == "-he":
             sort.heap_sort(data)
+        elif args[1] == "-cm":
+            sort.comb_sort(data)
         else:
             sys.exit("[error] select option")
     except IndexError:
