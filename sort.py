@@ -246,3 +246,39 @@ def shaker_sort(array):
 
 ###############################################################
 
+def heap_sort(array):
+    print("[log] run heap_sort")
+    method = "heap sort"
+    count = 0
+    n = len(array) - 1
+
+    for i in range((n//2), -1, -1):
+        array, count = downheap(array, count, method, i, n)
+    for i in range(n, 0, -1):
+        if array[0] > array[i]:
+            array[0], array[i] = array[i], array[0]
+            array, count = downheap(array, count, method, 0, i-1)
+    gi.make_endimage(array, count, method)
+
+def downheap(array, count, m, root, bot) :
+    l = root * 2 + 1
+    r = root * 2 + 2
+    
+    if l <= bot and array[l] > array[root]:
+        maxch = l
+    else :
+        maxch = root
+
+    if r <= bot and array[r] > array[maxch]:
+        maxch = r
+
+    if maxch != root:
+        array[root], array[maxch] = array[maxch], array[root]
+        array, count = downheap(array, count, m, maxch, bot)
+
+    gi.make_image(array, count, m, root, maxch)
+    count += 1
+
+    return array, count
+
+

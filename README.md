@@ -12,17 +12,17 @@ pythonのコードではフレームあたりの画像を生成するため、
 
 ※始めて実行する際はpicという名前のディレクトリを作る必要があります
 
-コマごとの画像の生成(pic/下に画像が生成されます/オプションは下記参照)
+### コマごとの画像の生成(pic/下に画像が生成されます/オプションは下記参照)
 ```bash
 $ python3 -B main.py [sort_option (ex:-in)]
 ```
 
-gif動画の生成(delayによって速さを変えられます)
+### gif動画の生成(delayによって速さを変えられます)
 ```bash
 $ convert -delay 3 -loop 0 pic/image*.png movie.gif
 ```
 
-gif動画の圧縮
+### gif動画の圧縮
 ```bash
 $ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
 ```
@@ -31,7 +31,7 @@ $ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
 
 ![result](https://github.com/smallptarmigan/SortVisualization/blob/master/gif/sample.gif)
 
-現在実行可能なソート
+### 現在実行可能なソート
 
 | ソート |  | 計算量 | オプション |
 |:------------:|:------------:|:------------:|:------------:|
@@ -43,4 +43,5 @@ $ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
 | 基数ソート | radix sort | <img src="https://latex.codecogs.com/png.latex?O(nk)" /> | -ra |
 | シェルソート | shell sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -sh |
 | シェイカーソート | shaker sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -sk |
+| ヒープソート | heap sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -he |
 
