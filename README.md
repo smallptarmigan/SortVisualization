@@ -35,12 +35,12 @@ $ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
 
 | ソート |  | 計算量 | オプション |
 |:------------:|:------------:|:------------:|:------------:|
-| 挿入ソート | insertion sort | $ O(n^2) $ | -in |
-| バブルソート | bubble sort | $ O(n^2) $ | -bu |
-| 選択ソート | selection sort | $ O(n^2) $ | -se |
-| マージソート | merge sort | $ O(n \log n) $ | -me |
-| クイックソート | quick sort | $ O(n \log n) $ | -qu | 
-| 基数ソート | radix sort | $ O(nk) $ | -ra |
-| シェルソート | shell sort | $ O(n \log n) $ | -sh |
-| シェイカーソート | shaker sort | $ O(n^2) $ | -sk |
+| 挿入ソート | insertion sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -in |
+| バブルソート | bubble sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -bu |
+| 選択ソート | selection sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -se |
+| マージソート | merge sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -me |
+| クイックソート | quick sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -qu | 
+| 基数ソート | radix sort | <img src="https://latex.codecogs.com/png.latex?O(nk)" /> | -ra |
+| シェルソート | shell sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -sh |
+| シェイカーソート | shaker sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -sk |
 
