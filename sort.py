@@ -287,6 +287,7 @@ def comb_sort(array):
     print("[log] run comb_sort")
     method = "comb sort"
     count = 0
+
     h = len(array)
     f = False
 
@@ -302,3 +303,28 @@ def comb_sort(array):
     gi.make_endimage(array, count, method)
 
 ###############################################################
+
+def oddeven_sort(array):
+    print("[log] run oddeven_sort")
+    method = "oddeven sort"
+    count = 0
+    
+    ischange = True
+
+    while ischange :
+        ischange = False
+        for i in range(0, len(array)-1, 2):
+            if array[i] > array[i+1]:
+                array[i], array[i+1] = array[i+1], array[i]
+                ischange = True
+            gi.make_image(array, count, method, i, i+1)
+            count += 1
+        for i in range(1, len(array)-1, 2):
+            if array[i] > array[i+1]:
+                array[i], array[i+1] = array[i+1], array[i]
+                ischange = True
+            gi.make_image(array, count, method, i, i+1)
+            count += 1
+
+    gi.make_endimage(array, count, method)
+

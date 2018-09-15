@@ -49,6 +49,8 @@ if __name__ == '__main__':
             sort.heap_sort(data)
         elif args[1] == "-cm":
             sort.comb_sort(data)
+        elif args[1] == "-oe":
+            sort.oddeven_sort(data)
         else:
             sys.exit("[error] select option")
     except IndexError:
