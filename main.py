@@ -43,10 +43,12 @@ if __name__ == '__main__':
             sort.radix_sort(data)
         elif args[1] == "-sh":
             sort.shell_sort(data)
+        elif args[1] == "-sk":
+            sort.shaker_sort(data)
         else:
             sys.exit("[error] select option")
     except IndexError:
         sys.exit("[error] select option")
 
-    print("[runtime] {0}[s]".format(time.time() - start))
+    print("[log] {0}[s]".format(time.time() - start))
 

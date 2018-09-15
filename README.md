@@ -33,13 +33,13 @@ $ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
 
 現在実行可能なソート
 
-| ソート |  | オプション |
-|:------------:|:------------:|:------------:|
-| 挿入ソート | insertion sort | -in |
-| バブルソート | bubble sort | -bu |
-| 選択ソート | selection sort | -se |
-| マージソート | merge sort | -me |
-| クイックソート | quick sort | -qu | 
-| 基数ソート | radix sort | -ra |
-| シェルソート | shell sort | -sh |
+| ソート |  | 計算量 | オプション |
+|:------------:|:------------:|:------------:|:------------:|
+| 挿入ソート | insertion sort | O(n^2) | -in |
+| バブルソート | bubble sort | O(n^2) | -bu |
+| 選択ソート | selection sort | O(n^2) | -se |
+| マージソート | merge sort | O(nlogn) | -me |
+| クイックソート | quick sort | O(nlogn) | -qu | 
+| 基数ソート | radix sort | O(nk) | -ra |
+| シェルソート | shell sort | O(nlogn) | -sh |
 

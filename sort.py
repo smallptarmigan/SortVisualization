@@ -194,26 +194,55 @@ def shell_sort(array):
     print("[log] run shell sort")
     method = "shell sort"
     count = 0
-    increment = 4
-    while increment > 0:
+    inc = 4
+    while inc > 0:
         for i in range(len(array)):
             j = i
             temp = array[i]
-            while j >= increment and array[j-increment] > temp:
-                array[j] = array[j-increment]
-                j = j -increment
+            while j >= inc and array[j-inc] > temp:
+                array[j] = array[j-inc]
+                j = j -inc
             array[j] = temp
             gi.make_image(array, count, method, i, -1)
             count += 1
         
-        if increment//2 != 0:
-            increment = increment//2
-        elif increment == 1:
-            increment = 0
+        if inc//2 != 0:
+            inc = inc//2
+        elif inc == 1:
+            inc = 0
         else:
-            increment = 1
+            inc = 1
     
     gi.make_endimage(array, count, method)
 
-    
+###############################################################
+
+def shaker_sort(array):
+    print("[log] run shaker_sort")
+    method = "shaker sort"
+    count = 0
+
+    l = 0
+    r = len(array)-1
+    while l < r:
+
+        for i in range(l,r):
+            if array[i] > array[i+1]:
+                array[i], array[i+1] = array[i+1], array[i]
+                shift = i
+            gi.make_image(array, count, method, i, -1)
+            count += 1
+        r = shift
+
+        for i in range(r, l, -1):
+            if array[i] < array[i-1]:
+                array[i], array[i-1] = array[i-1], array[i]
+                shift = i
+            gi.make_image(array, count, method, i, -1)
+            count += 1
+        l = shift
+
+    gi.make_endimage(array, count, method)
+
+###############################################################
 
