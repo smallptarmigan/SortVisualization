@@ -328,3 +328,31 @@ def oddeven_sort(array):
 
     gi.make_endimage(array, count, method)
 
+###############################################################
+
+def stooge_sort(array):
+    print("[log] run stooge_sort")
+    method = "stooge sort"
+    count = 0
+    sys.setrecursionlimit(10000)    
+    array, count = stooge(array, count, method, 0, len(array)-1)
+    gi.make_endimage(array, count, method)
+    print(count)
+
+def stooge(array, count, m, l, r):
+    if array[l] > array[r]:
+        array[l], array[r] = array[r], array[l]
+
+    t = (r - l + 1) // 3
+
+    if t < 1:
+        return array, count
+
+    array, count = stooge(array, count, m, l, r-t)
+    array, count = stooge(array, count, m, l+t, r)
+    array, count = stooge(array, count, m, l, r-t)
+
+    gi.make_image(array, count, m, l, r)
+    count += 1
+
+    return array, count

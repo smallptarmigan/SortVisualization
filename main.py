@@ -51,10 +51,14 @@ if __name__ == '__main__':
             sort.comb_sort(data)
         elif args[1] == "-oe":
             sort.oddeven_sort(data)
+        elif args[1] == "-st":
+            data = array.array('i', range(1, 30))
+            mix_data(data)
+            sort.stooge_sort(data)
         else:
             sys.exit("[error] select option")
     except IndexError:
-        sys.exit("[error] select option")
+        sys.exit("[error] Index Error")
 
     print("[log] {0}[s]".format(time.time() - start))
 
