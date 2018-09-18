@@ -247,7 +247,7 @@ def shaker_sort(array):
 ###############################################################
 
 def heap_sort(array):
-    print("[log] run heap_sort")
+    print("[log] run heap sort")
     method = "heap sort"
     count = 0
     n = len(array) - 1
@@ -284,7 +284,7 @@ def downheap(array, count, m, root, bot) :
 ###############################################################
 
 def comb_sort(array):
-    print("[log] run comb_sort")
+    print("[log] run comb sort")
     method = "comb sort"
     count = 0
 
@@ -305,7 +305,7 @@ def comb_sort(array):
 ###############################################################
 
 def oddeven_sort(array):
-    print("[log] run oddeven_sort")
+    print("[log] run oddeven sort")
     method = "oddeven sort"
     count = 0
     
@@ -331,13 +331,12 @@ def oddeven_sort(array):
 ###############################################################
 
 def stooge_sort(array):
-    print("[log] run stooge_sort")
+    print("[log] run stooge sort")
     method = "stooge sort"
     count = 0
     sys.setrecursionlimit(10000)    
     array, count = stooge(array, count, method, 0, len(array)-1)
     gi.make_endimage(array, count, method)
-    print(count)
 
 def stooge(array, count, m, l, r):
     if array[l] > array[r]:
@@ -356,3 +355,17 @@ def stooge(array, count, m, l, r):
     count += 1
 
     return array, count
+
+###############################################################
+
+def gnome_sort(array):
+    print("[log] run gnome sort")
+    method ="gnome sort"
+    count = 0
+    
+    
+
+
+    gi.make_endimage(array, count, method)
+    
+
