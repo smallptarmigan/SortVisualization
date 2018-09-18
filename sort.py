@@ -363,8 +363,16 @@ def gnome_sort(array):
     method ="gnome sort"
     count = 0
     
+    gnome = 1
     
-
+    while gnome < len(array):
+        if gnome >= 1 and array[gnome-1] > array[gnome]:
+            array[gnome], array[gnome-1] = array[gnome-1], array[gnome]
+            gnome -= 1
+        else:
+            gnome += 1
+        gi.make_image(array, count, method, gnome-1, -1)
+        count += 1
 
     gi.make_endimage(array, count, method)
     

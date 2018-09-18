@@ -51,6 +51,8 @@ if __name__ == '__main__':
             sort.comb_sort(data)
         elif args[1] == "-oe":
             sort.oddeven_sort(data)
+        elif args[1] == "-gn":
+            sort.gnome_sort(data)
         elif args[1] == "-st":
             data = array.array('i', range(1, 30))
             mix_data(data)
