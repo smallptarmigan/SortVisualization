@@ -1,4 +1,4 @@
-# SortVisualization
+# [WIP] SortVisualization
 
 Visualization of various sorting algorithms by python3
 
@@ -12,7 +12,7 @@ pythonのコードではフレームあたりの画像を生成するため、
 
 ※始めて実行する際はpicという名前のディレクトリを作る必要があります
 
-オプションとして-gifをつけることで直接GIFを生成することが出来ます．
+オプションとして-gifをつけることで直接GIFを生成することが出来ます．(未実装)
 
 #### コマごとの画像の生成(pic/下に画像が生成されます/オプションは下記参照)
 ```bash
