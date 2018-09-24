@@ -47,7 +47,7 @@ $ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
 | コムソート | comb sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -cm |
 | 奇偶転置ソート | oddeven sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -oe |
 | ノームソート | gnome sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -gn |
-| グラビティソート | gravity sort | <img src="https://latex.codecogs.com/png.latex?O(n)" /> | -gn |
+| グラビティソート | gravity sort | <img src="https://latex.codecogs.com/png.latex?O(n)" /> | -gr |
 | ストゥージソート | stooge sort | <img src="https://latex.codecogs.com/gif.latex?O(n^{log&space;3&space;/&space;log&space;1.5}&space;)" /> | -st |
 
 
