@@ -33,21 +33,21 @@ $ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
 
 #### 現在実行可能なソート
 
-| ソート |  | 計算量 | オプション |
-|:------------:|:------------:|:------------:|:------------:|
-| 挿入ソート | insertion sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -in |
-| バブルソート | bubble sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -bu |
-| 選択ソート | selection sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -se |
-| マージソート | merge sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -me |
-| クイックソート | quick sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -qu | 
-| 基数ソート | radix sort | <img src="https://latex.codecogs.com/png.latex?O(nk)" /> | -ra |
-| シェルソート | shell sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -sh |
-| シェイカーソート | shaker sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -sk |
-| ヒープソート | heap sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -he |
-| コムソート | comb sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -cm |
-| 奇偶転置ソート | oddeven sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -oe |
-| ノームソート | gnome sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -gn |
-| グラビティソート | gravity sort | <img src="https://latex.codecogs.com/png.latex?O(n)" /> | -gr |
-| ストゥージソート | stooge sort | <img src="https://latex.codecogs.com/gif.latex?O(n^{log&space;3&space;/&space;log&space;1.5}&space;)" /> | -st |
+|| ソート |  | 計算量 | オプション |
+|:------------:|:------------:|:------------:|:------------:|:------------:|
+| 1 | 挿入ソート | insertion sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -in |
+| 2 | バブルソート | bubble sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -bu |
+| 3 | 選択ソート | selection sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -se |
+| 4 | マージソート | merge sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -me |
+| 5 | クイックソート | quick sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -qu | 
+| 6 | 基数ソート | radix sort | <img src="https://latex.codecogs.com/png.latex?O(nk)" /> | -ra |
+| 7 | シェルソート | shell sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -sh |
+| 8 | シェイカーソート | shaker sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -sk |
+| 9 | ヒープソート | heap sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -he |
+| 10 | コムソート | comb sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -cm |
+| 11 | 奇偶転置ソート | oddeven sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -oe |
+| 12 | ノームソート | gnome sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -gn |
+| 13 | グラビティソート | gravity sort | <img src="https://latex.codecogs.com/png.latex?O(n)" /> | -gr |
+| 14 | ストゥージソート | stooge sort | <img src="https://latex.codecogs.com/gif.latex?O(n^{log&space;3&space;/&space;log&space;1.5}&space;)" /> | -st |
 
 
