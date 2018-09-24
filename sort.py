@@ -2,6 +2,7 @@
 
 import sys
 import array
+import numpy as np
 import genimage as gi
 
 def insertion_sort(array):
@@ -376,4 +377,43 @@ def gnome_sort(array):
 
     gi.make_endimage(array, count, method)
     
+###############################################################
+
+def gravity_sort(arr):
+    print("[log] run gravity sort")
+    method = "gravity sort"
+    count = 0
+    
+    mat = arrtomat(arr)
+    x = array.array('i')
+
+    while mat != x :
+        gi.make_image(arr, count, method, -1, -1)
+        count += 1
+        x = mat
+        mat = gravity(mat)
+        arr = mattoarr(mat)
+
+    gi.make_endimage(arr, count, method)
+
+def transmat(mat):
+    return list(map(list, zip(*mat)))
+
+def transcol(col):
+    col_r = col[::-1] + [0]
+    i = col_r.index(0)
+    del col_r[i]
+    return col_r[::-1]
+
+def gravity(mat):
+    return transmat([transcol(col) for col in transmat(mat)])
+
+def arrtomat(arr):
+    return [[1]*n + [0]*(max(arr)-n) for n in arr]
+    
+def mattoarr(mat):
+    return array.array('i', [sum(x) for x in mat])
+
+###############################################################
+
 

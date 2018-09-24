@@ -27,40 +27,39 @@ if __name__ == '__main__':
     data = array.array('i', range(1, LISTNUM))
     mix_data(data)
 
-    try :
-        args = sys.argv
-        if args[1] == "-in":
-            sort.insertion_sort(data)
-        elif args[1] == "-bu":
-            sort.bubble_sort(data)
-        elif args[1] == "-se":
-            sort.selection_sort(data)
-        elif args[1] == "-me":
-            sort.merge_sort(data)
-        elif args[1] == "-qu":
-            sort.quick_sort(data)
-        elif args[1] == "-ra":
-            sort.radix_sort(data)
-        elif args[1] == "-sh":
-            sort.shell_sort(data)
-        elif args[1] == "-sk":
-            sort.shaker_sort(data)
-        elif args[1] == "-he":
-            sort.heap_sort(data)
-        elif args[1] == "-cm":
-            sort.comb_sort(data)
-        elif args[1] == "-oe":
-            sort.oddeven_sort(data)
-        elif args[1] == "-gn":
-            sort.gnome_sort(data)
-        elif args[1] == "-st":
-            data = array.array('i', range(1, 30))
-            mix_data(data)
-            sort.stooge_sort(data)
-        else:
-            sys.exit("[error] select option")
-    except IndexError:
-        sys.exit("[error] Index Error")
+    args = sys.argv
+    if args[1] == "-in":
+        sort.insertion_sort(data)
+    elif args[1] == "-bu":
+        sort.bubble_sort(data)
+    elif args[1] == "-se":
+        sort.selection_sort(data)
+    elif args[1] == "-me":
+        sort.merge_sort(data)
+    elif args[1] == "-qu":
+        sort.quick_sort(data)
+    elif args[1] == "-ra":
+        sort.radix_sort(data)
+    elif args[1] == "-sh":
+        sort.shell_sort(data)
+    elif args[1] == "-sk":
+        sort.shaker_sort(data)
+    elif args[1] == "-he":
+        sort.heap_sort(data)
+    elif args[1] == "-cm":
+        sort.comb_sort(data)
+    elif args[1] == "-oe":
+        sort.oddeven_sort(data)
+    elif args[1] == "-gn":
+        sort.gnome_sort(data)
+    elif args[1] == "-gr":
+        sort.gravity_sort(data)
+    elif args[1] == "-st":
+        data = array.array('i', range(1, 30))
+        mix_data(data)
+        sort.stooge_sort(data)
+    else:
+        sys.exit("[error] select option")
 
     print("[log] {0}[s]".format(time.time() - start))
 
