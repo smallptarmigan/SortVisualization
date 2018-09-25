@@ -1,6 +1,6 @@
-# SortVisualization
+# [WIP] SortVisualization
 
-Visualizing various sorting algorithms by python3
+Visualization of various sorting algorithms by python3
 
 このプログラムでは様々なソートの可視化を行う
 
@@ -11,6 +11,8 @@ pythonのコードではフレームあたりの画像を生成するため、
 動画にする際はimagemagickを用いてgifに変換する必要があります
 
 ※始めて実行する際はpicという名前のディレクトリを作る必要があります
+
+オプションとして-gifをつけることで直接GIFを生成することが出来ます．(未実装)
 
 #### コマごとの画像の生成(pic/下に画像が生成されます/オプションは下記参照)
 ```bash
@@ -26,7 +28,6 @@ $ convert -delay 3 -loop 0 pic/image*.png movie.gif
 ```bash
 $ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
 ```
-
 以下の動画は選択ソートの例です。
 
 ![result](https://github.com/smallptarmigan/SortVisualization/blob/master/gif/sample.gif)
