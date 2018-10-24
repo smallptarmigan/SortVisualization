@@ -1,4 +1,4 @@
-# SortVisualization
+# Sort Visualization 15type
 
 Visualizing various sorting algorithms by python3
 
@@ -40,14 +40,15 @@ $ convert movie.gif -coalesce -scale 70% -deconstruct output.gif
 | 3 | 選択ソート | selection sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -se |
 | 4 | マージソート | merge sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -me |
 | 5 | クイックソート | quick sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -qu | 
-| 6 | 基数ソート | radix sort | <img src="https://latex.codecogs.com/png.latex?O(nk)" /> | -ra |
-| 7 | シェルソート | shell sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -sh |
-| 8 | シェイカーソート | shaker sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -sk |
-| 9 | ヒープソート | heap sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -he |
-| 10 | コムソート | comb sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -cm |
-| 11 | 奇偶転置ソート | oddeven sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -oe |
-| 12 | ノームソート | gnome sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -gn |
-| 13 | グラビティソート | gravity sort | <img src="https://latex.codecogs.com/png.latex?O(n)" /> | -gr |
-| 14 | ストゥージソート | stooge sort | <img src="https://latex.codecogs.com/gif.latex?O(n^{log&space;3&space;/&space;log&space;1.5}&space;)" /> | -st |
+| 6 | LSD 基数ソート | LSD radix sort | <img src="https://latex.codecogs.com/png.latex?O(nk)" /> | -lsd |
+| 7 | MSD 基数ソート | MSD radix sort | <img src="https://latex.codecogs.com/png.latex?O(nk)" /> | -msd |
+| 8 | シェルソート | shell sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -sh |
+| 9 | シェイカーソート | shaker sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -sk |
+| 10 | ヒープソート | heap sort | <img src="https://latex.codecogs.com/png.latex?O(n&space;\log&space;n)" /> | -he |
+| 11 | コムソート | comb sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -cm |
+| 12 | 奇偶転置ソート | oddeven sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -oe |
+| 13 | ノームソート | gnome sort | <img src="https://latex.codecogs.com/png.latex?O(n^2)" /> | -gn |
+| 14 | グラビティソート | gravity sort | <img src="https://latex.codecogs.com/png.latex?O(n)" /> | -gr |
+| 15 | ストゥージソート | stooge sort | <img src="https://latex.codecogs.com/gif.latex?O(n^{log&space;3&space;/&space;log&space;1.5}&space;)" /> | -st |
 
 

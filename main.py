@@ -38,8 +38,10 @@ if __name__ == '__main__':
         sort.merge_sort(data)
     elif args[1] == "-qu":
         sort.quick_sort(data)
-    elif args[1] == "-ra":
-        sort.radix_sort(data)
+    elif args[1] == "-lsd":
+        sort.lsd_radix_sort(data)
+    elif args[1] == "-msd":
+        sort.msd_radix_sort(data)
     elif args[1] == "-sh":
         sort.shell_sort(data)
     elif args[1] == "-sk":
@@ -55,6 +57,7 @@ if __name__ == '__main__':
     elif args[1] == "-gr":
         sort.gravity_sort(data)
     elif args[1] == "-st":
+        print("[log] reset array")
         data = array.array('i', range(1, 30))
         mix_data(data)
         sort.stooge_sort(data)

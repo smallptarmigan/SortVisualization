@@ -58,9 +58,7 @@ def selection_sort(array):
             gi.make_image(array, count, method, j, least)
             count += 1
             #sys.exit()
-        tmp = array[i]
-        array[i] = array[least]
-        array[least] = tmp
+        array[i], array[least] = array[least], array[i]
     gi.make_endimage(array, count, method)
 
 ###############################################################
@@ -162,9 +160,9 @@ def quick(array, l, r, count, m):
 
 ###############################################################
 
-def radix_sort(array):
-    print("[log] run radix sort")
-    method = "radix sort"
+def lsd_radix_sort(array):
+    print("[log] run LSD radix sort")
+    method = "radix sort (LSD)"
     count = 0
     r = 10
     m = 1
@@ -188,6 +186,60 @@ def radix_sort(array):
         m *= 10
 
     gi.make_endimage(array, count, method)
+
+###############################################################
+
+def msd_radix_sort(array):
+    print("[log] run MSD radix sort")
+    method = "radix sort (MSD)"
+    count = 0
+    array, count = msd_radix(array, 0, len(array)-1, count, method)
+    gi.make_endimage(array, count, method)
+
+def msd_radix(array, l, r, count, method, N = 2):
+    work = array[:]
+    if r - l <= 10:
+        print(r-l)
+        array, count = msd_insert(array, l, r, count, method)
+    else:
+        C = [0] * 257
+        shift = N * 2
+        for i in range(l, r+1):
+            C[(array[i] >> shift) & 0xff] += 1
+            #print("{0:02o} {0:08b} {1:08b}".format(array[i],(array[i] >> shift)))
+        for i in range(1, 257):
+            C[i] += C[i-1]
+        for i in range(l, r-1, -1):
+            j = (array[i] >> shift) & 0xff
+            C[j] -= 1
+            work[C[j] + l] = array[i]
+        for i in range(l, r+1):
+            array[i] = work[i]
+
+        gi.make_image(array, count, method, -1, -1)
+        count += 1
+
+        if N > 0:
+            C[256] = r - l + 1
+            for i in range(0, 256):
+                L = l + C[i]
+                R = l + C[i+1] - 1
+                if L < R:
+                    array, count = msd_radix(array, L, R, count, method, N-1)
+
+    return array, count
+
+def msd_insert(array, l, r, count, method):
+    for i in range(l ,r-1):
+        m = i
+        for j in range(i+1, r):
+            if array[m] > array[j]:
+                m = j
+            gi.make_image(array, count, method, i, m)
+            count += 1
+        array[m], array[i] = array[i], array[m]
+
+    return array, count
 
 ###############################################################
     
@@ -362,8 +414,7 @@ def stooge(array, count, m, l, r):
 def gnome_sort(array):
     print("[log] run gnome sort")
     method ="gnome sort"
-    count = 0
-    
+    count = 0    
     gnome = 1
     
     while gnome < len(array):
