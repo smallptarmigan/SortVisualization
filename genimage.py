@@ -1,10 +1,13 @@
 # make image python file
 
+import os
 import array
 import numpy as np
 import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
+
+OUTPUTDIR = './pic/'
 
 def make_image(array, count, m, a, b):
     fig, ax = plt.subplots(1,1)
@@ -23,7 +26,9 @@ def make_image(array, count, m, a, b):
              verticalalignment='top', family='monospace', transform=ax.transAxes)
     plt.tick_params(labelbottom="off",bottom="off")
     plt.tick_params(labelleft="off",left="off")
-    plt.savefig('./pic/image_{:0>6}.png'.format(count))
+    if not os.path.exists(OUTPUTDIR):
+        os.mkdir(OUTPUTDIR)
+    plt.savefig(OUTPUTDIR+'image_{:0>6}.png'.format(count))
     #plt.show()
     plt.close('all')
     count += 1

@@ -28,6 +28,9 @@ if __name__ == '__main__':
     mix_data(data)
 
     args = sys.argv
+    if len(args) < 2:
+        sys.exit("[error] select option")
+
     if args[1] == "-in":
         sort.insertion_sort(data)
     elif args[1] == "-bu":

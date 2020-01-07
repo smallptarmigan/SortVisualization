@@ -10,11 +10,15 @@ fi
 
 convert -delay 3 -loop 0 pic/image*.png movie.gif
 
+echo "[log] finished movie.gif"
+
 if [ $? -gt 0 ] ; then
     exit 1
 fi
 
 convert movie.gif -coalesce -scale 70% -deconstruct output.gif
+
+echo "[log] finished output.gif"
 
 rm movie.gif
 
