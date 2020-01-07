@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # make image python file
 
 import os

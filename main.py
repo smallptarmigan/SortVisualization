@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Sort Visualization main function
 
 import sys
